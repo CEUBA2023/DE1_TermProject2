@@ -1,4 +1,4 @@
-# Powerpoint Link
+# Powerpoint Slides
 
 To visit the powerpoint slides, feel free to click the hyperlink below:
 
