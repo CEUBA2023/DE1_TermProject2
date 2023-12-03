@@ -1,0 +1,5 @@
+# Powerpoint Link
+
+To visit the powerpoint slides, feel free to copy and paste the url below in your desired browser:
+
+[url](https://www.canva.com/design/DAF1vCPGiWU/NENKGi4grSNb9EvxmWci9g/edit?utm_content=DAF1vCPGiWU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
