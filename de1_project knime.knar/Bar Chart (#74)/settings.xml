@@ -19,8 +19,8 @@
         <config key="frequencyColumns">
             <config key="selected_Internals">
                 <entry key="array-size" type="xint" value="2"/>
-                <entry key="0" type="xstring" value="Mean(Average Season Temperature)"/>
-                <entry key="1" type="xstring" value="Count*(Item Purchased Count)"/>
+                <entry key="0" type="xstring" value="Avg Yearly Temp"/>
+                <entry key="1" type="xstring" value="Sandals Purchased"/>
             </config>
             <entry key="mode" type="xstring" value="MANUAL"/>
             <config key="patternFilter">
@@ -31,8 +31,8 @@
             <config key="manualFilter">
                 <config key="manuallySelected">
                     <entry key="array-size" type="xint" value="2"/>
-                    <entry key="0" type="xstring" value="Mean(Average Season Temperature)"/>
-                    <entry key="1" type="xstring" value="Count*(Item Purchased Count)"/>
+                    <entry key="0" type="xstring" value="Avg Yearly Temp"/>
+                    <entry key="1" type="xstring" value="Sandals Purchased"/>
                 </config>
                 <config key="manuallyDeselected">
                     <entry key="array-size" type="xint" value="1"/>
@@ -52,17 +52,17 @@
     </config>
     <config key="view">
         <entry key="allowImageDownload" type="xboolean" value="true"/>
-        <entry key="categoryAxisLabel" type="xstring" isnull="true" value=""/>
+        <entry key="categoryAxisLabel" type="xstring" value=""/>
         <entry key="chartType" type="xstring" value="GROUPED"/>
         <entry key="direction" type="xstring" value="HORIZONTAL"/>
         <entry key="enableAnimation" type="xboolean" value="true"/>
-        <entry key="frequencyAxisLabel" type="xstring" isnull="true" value=""/>
+        <entry key="frequencyAxisLabel" type="xstring" value=""/>
         <entry key="publishSelection" type="xboolean" value="true"/>
         <entry key="showLegend" type="xboolean" value="true"/>
         <entry key="showTooltip" type="xboolean" value="true"/>
         <entry key="showValues" type="xboolean" value="false"/>
         <entry key="subscribeToSelection" type="xboolean" value="true"/>
-        <entry key="title" type="xstring" value="Bar Chart"/>
+        <entry key="title" type="xstring" value="Sandals Purchased by Region"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
@@ -147,6 +147,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="018a8598-c4a5-44f7-9466-464a7b7a1112"/>
+        <entry key="file_store_id" type="xstring" value="3e233f59-ef29-4025-a3be-e3a01eec6e14"/>
     </config>
 </config>

@@ -73,7 +73,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_1">
-        <entry key="column_name" type="xstring" value="Mean(Average Season Temperature)"/>
+        <entry key="column_name" type="xstring" value="Avg Yearly Temp"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
@@ -98,7 +98,7 @@
         <config key="meta_data"/>
     </config>
     <config key="column_spec_2">
-        <entry key="column_name" type="xstring" value="Count*(Item Purchased Count)"/>
+        <entry key="column_name" type="xstring" value="Sandals Purchased"/>
         <config key="element_names">
             <entry key="array-size" type="xint" value="0"/>
         </config>
