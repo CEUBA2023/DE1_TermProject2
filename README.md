@@ -107,7 +107,7 @@ We didn't include an ER diagram as we didn't use a relational dataset. All of ou
 We can make out a few trends from the bar chart:
 (1) Highest amount of free shipping tends to come from the states with the highest level of GDP
 a. Reason? For most shops, one must reach a price threshold in order to unlock free shipping. Therefore, those able to spend more (higher state GDP), more often have this option.
-II. Highest levels of store pickup relates to lowest level of state GDP
+(2). Highest levels of store pickup relates to lowest level of state GDP
 a. Reason? Customers may opt for in-store pickup in order to forgo shipping costs
 
 **6.3.** How do sandal purchases compare in different US regions with varying average temperatures?
