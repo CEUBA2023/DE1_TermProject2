@@ -74,13 +74,53 @@ API data provides many temperature values taken from different stations for each
            "value": 2.8
        } ……
 ```
-**Creating SQL Dump**
+**3) Creating SQL Dump**
 A dump named shopping trends dump.sql was created to connect with Knime later. The columns and observations in the table created when we run the sql script can be seen below.
 
-<img width="290" alt="Screenshot 2023-12-02 at 15 02 15" src="https://github.com/CEUBA2023/DE1_TermProject2/assets/141356115/516e7207-abf7-47f7-bb2a-9b2d70eb16b0">
-<img width="886" alt="Screenshot 2023-12-02 at 15 04 55" src="https://github.com/CEUBA2023/DE1_TermProject2/assets/141356115/36cdef45-4239-4074-94b6-ad4f743af745"> 
+![unnamed (4)](https://github.com/CEUBA2023/DE1_TermProject2/assets/141356115/2c4d39f2-66f7-4c6f-b6cd-6ef7f387d671) <img width="1435" alt="Screenshot 2023-12-02 at 15 00 42" src="https://github.com/CEUBA2023/DE1_TermProject2/assets/141356115/77bf163c-d04a-4378-a956-33d6e5eb0a25">
 
 
-**KNIME:**
-After downloading a datatable from Kaggle (loaded Kaggle data set/dump into MySQLWorkbench) and pulling data from APIs, we saved the data into files and saved them to github. After modifying user privileges in MySQLWorkbench to allow access to Knime, we started by connecting MySQLWorkbench to Knime by way of the  'MySQL Connector', and further connecting our main data table in the 'DB Query Reader' node. Next, we used 'File Reader' nodes to load the API data into Knime using github URLs. For each API file, we cleaned the data tables using mainly 'Column Filter', 'Row Filter', 'String Replacer',  'String Manipulation', and 'Column Renamer' nodes. After cleaning, we joined the 4 data tables. In order to produce meaningful visualizations of the data, we had to further alter the datatables, appending more columns needed through  'GroupBy', 'String to Number', 'Math Formula', and 'Binner' nodes.  We then created two visualizations: a bar chart to map shipping type by average state GDP (using 'Bar Chart' node), and a scatter plot displaying the relationship between sweater purchases and average temperature by state and (using 'Color Manager' and 'Scatter Plot' nodes).
+ 
+**4) KNIME:**
+After downloading a data table from Kaggle (loaded Kaggle data set/dump into MySQLWorkbench) and pulling data from APIs, we saved the data into files and saved them to GitHub. After modifying user privileges in MySQLWorkbench to allow access to Knime, we started by connecting MySQLWorkbench to Knime by way of the  'MySQL Connector', and further connecting our main data table in the 'DB Query Reader' node. Next, we used 'File Reader' nodes to load the API data into Knime using Github URLs. For each API file, we cleaned the data tables using mainly 'Column Filter', 'Row Filter', 'String Replacer',  'String Manipulation', and 'Column Renamer' nodes. After cleaning, we joined the 4 data tables. In order to produce meaningful visualizations of the data, we had to further alter the datatables, appending more columns needed through  'GroupBy', 'String to Number', 'Math Formula', and 'Binner' nodes.  We then created three visualizations: 
+* A bar chart to map shipping type by average state GDP 
+* A bar chart to map sandal purchases per region compared to average yearly temperatures (using 'Bar Chart' node)
+* A scatter plot displaying the relationship between sweater purchases and average temperature by state (using 'Color Manager' and 'Scatter Plot' nodes).
+
+![unnamed](https://github.com/CEUBA2023/DE1_TermProject2/assets/141356115/7d428613-4fd6-4a9c-b8c6-2254b9571894)
+
+**5) ER diagram for RDBMS**  
+We didn't include an ER diagram as we didn't use a relational dataset. All of our data tables are related through the key ID of state/location
+
+**6) Analytics and/or visualization0**  
+ **6.1.** Is there a correlation between the number of sweaters purchased and average state temperature?
+
+![unnamed (1)](https://github.com/CEUBA2023/DE1_TermProject2/assets/141356115/448e92d6-7fde-478d-8c64-16feb011c2a8) 
+
+**Analysis:** Despite the synthetic data on shopping trends, it seems on average, that sweater purchases tend to follow a general pattern: More sweaters are bought in states with lower average temperatures, compared to those with higher average temperatures in which fewer sweaters are purchased.
+
+**6.2.** How does shipping type vary with the average state-level GDP?
+
+![unnamed (2)](https://github.com/CEUBA2023/DE1_TermProject2/assets/141356115/debb4449-a68d-4e2b-868a-7e981a1f2dcf)
+
+**Analysis:** 
+We can make out a few trends from the bar chart:
+(1) Highest amount of free shipping tends to come from the states with the highest level of GDP
+a. Reason? For most shops, one must reach a price threshold in order to unlock free shipping. Therefore, those able to spend more (higher state GDP), more often have this option.
+II. Highest levels of store pickup relates to lowest level of state GDP
+a. Reason? Customers may opt for in-store pickup in order to forgo shipping costs
+
+**6.3.** How do sandal purchases compare in different US regions with varying average temperatures?
+
+![unnamed (3)](https://github.com/CEUBA2023/DE1_TermProject2/assets/141356115/ad16c15b-9038-4ba2-87d0-91c01feae66f)
+
+**Analysis:**
+Assumption: We expected purchases to be higher in regions with warmer average climate. The data shows that colder climates purchased more sandals
+
+**Possible Reasons:** 
+. Regions in the U.S. that are traditionally colder might have a higher population (ex. New england, middle atlantic) leading to overall higher purchases
+. Customers in colder climates may relish their respective summers more and therefore make more 'summer' purchases when appropriate
+
+**7) Conclusion**
+Based on our analytical questions, we had the test hypothesis that average temperatures would influence the type of purchases made across the US when accounting for GDP. From our analysis, however, those assumptions did not hold true in all cases. From the analysis of sweaters and sandals, we can see that items associated with colder seasons fit the hypothesis but items associated with warmer seasons do not. A correlation cannot be made between temperature and shopping trends as expected. When accounting for GDP, as noted above, it could be reasoned that states with higher average GDPs are purchasing more overall, which would also fit normal economic conventions due to higher purchasing power. 
 
